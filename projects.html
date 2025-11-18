@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyectos – Harlee Ramos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" data-key="nav_home">Inicio</a></li>
+      <li><a href="index.html#sobre-mi" data-key="nav_about">Sobre mí</a></li>
+      <li><a href="index.html#habilidades" data-key="nav_skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia" data-key="nav_experience">Experiencia</a></li>
+      <li><a href="projects.html" data-key="nav_projects">Proyectos</a></li>
+      <li><a href="index.html#contacto" data-key="nav_contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 data-key="projects_title">Proyectos</h2>
+      <p data-key="projects_intro">Aquí puedes ver algunos de mis proyectos destacados en tecnología, análisis de datos, automatización y robótica.</p>
+
+      <!-- Newsletter Project -->
+      <div class="project-card">
+        <h3 data-key="proj1_title">Newsletter: Techne & Mind LATAM</h3>
+        <p data-key="proj1_desc">Newsletter enfocada en visualizaciones, ciencia de datos, aprendizaje automático, tecnología y análisis aplicado.</p>
+        <style>
+          .libutton {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 7px;
+            text-align: center;
+            outline: none;
+            text-decoration: none !important;
+            color: #ffffff !important;
+            width: 200px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: #0A66C2;
+            font-family: "SF Pro Text", Helvetica, sans-serif;
+            margin-top: 10px;
+          }
+        </style>
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7378799835585576960" target="_blank" data-key="proj1_button">Suscribirte en LinkedIn</a>
+      </div>
+
+      <!-- Robotics Project -->
+      <div class="project-card">
+        <h3 data-key="proj2_title">Robotics Project: NOVA Robot</h3>
+        <p data-key="proj2_desc">Robot mecanum tri-motor con aplicación Android para control remoto. Desarrollado como parte del IIT Robotics Club.</p>
+        <a href="https://github.com/harleeliz/Nova" target="_blank">
+          <i class="fab fa-github"></i> GitHub – NOVA
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Script de idioma -->
+  <script>
+    const translations = {
+      es: {
+        nav_home: "Inicio",
+        nav_about: "Sobre mí",
+        nav_skills: "Habilidades",
+        nav_experience: "Experiencia",
+        nav_projects: "Proyectos",
+        nav_contact: "Contacto",
+        projects_title: "Proyectos",
+        projects_intro: "Aquí puedes ver algunos de mis proyectos destacados en tecnología, análisis de datos, automatización y robótica.",
+        proj1_title: "Newsletter: Techne & Mind LATAM",
+        proj1_desc: "Newsletter enfocada en visualizaciones, ciencia de datos, aprendizaje automático, tecnología y análisis aplicado.",
+        proj1_button: "Suscribirte en LinkedIn",
+        proj2_title: "Proyecto de Robótica: NOVA Robot",
+        proj2_desc: "Robot mecanum tri-motor con aplicación Android para control remoto. Desarrollado como parte del IIT Robotics Club."
+      },
+      en: {
+        nav_home: "Home",
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_experience: "Experience",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+        projects_title: "Projects",
+        projects_intro: "Here you can see some of my highlighted projects in technology, data analysis, automation, and robotics.",
+        proj1_title: "Newsletter: Techne & Mind LATAM",
+        proj1_desc: "Newsletter focused on visualizations, data science, machine learning, technology, and applied analytics.",
+        proj1_button: "Subscribe on LinkedIn",
+        proj2_title: "Robotics Project: NOVA Robot",
+        proj2_desc: "Tri-motor mecanum robot with Android remote-control app. Developed as part of the IIT Robotics Club."
+      }
+    };
+
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll("[data-key]");
+      elements.forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key])
+          el.textContent = translations[lang][key];
+      });
+    }
+
+    setLanguage("es");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+:root {
+  --pink: #FFCBE1;
+  --green: #fccee8;
+  --yellow: #F9E1A8;
+  --blue: #e7d1f9;
+  --purple: #DCCCEC;
+  --peach: #FFDAB4;
+
+  --primary-bg: var(--blue);
+  --primary-text: #163b36;
+  --light-bg: var(--green);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Hero */
+.hero {
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #003366;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.buttons .btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Secciones */
+.section {
+  padding: 60px 0;
+}
+
+.bg-light {
+  background: var(--light-bg);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--primary-text);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.skills-grid div {
+  background: var(--peach);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.skills-grid i {
+  font-size: 2rem;
+  color: var(--primary-text);
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Jobs */
+.job {
+  margin-bottom: 30px;
+}
+
+.job h3 {
+  color: var(--primary-text);
+}
+
+.company {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Contacto */
+.contact-links a {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  color: var(--primary-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-links i {
+  margin-right: 8px;
+}
+
+/* Footer */
+footer {
+  background: var(--purple);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+
+  /* Botón de idioma */
+.lang-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.lang-toggle button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  background: #103022;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-toggle button:hover {
+  background: #b8e9b6;
+}
+
+
+/*Headshot picture*/
+
+.headshot {
+  width: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+}
