@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="video-container">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted playsinline id="hero-video">
       <source src="assets/Video_hr.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -22,4 +22,12 @@
     </div>
   </div>
 </body>
+
+<script>
+  const vid = document.getElementById('hero-video');
+  vid.addEventListener('ended', () => {
+    vid.currentTime = vid.duration; // freeze on last frame
+  });
+</script>
+
 </html>
