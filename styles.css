@@ -167,6 +167,7 @@ footer {
   margin-bottom: 25px;
 }
 
+
 /* ----------  VIDEO + WALLPAPER + HOTSPOTS  ---------- */
 .video-container {
   position: relative;
@@ -179,26 +180,37 @@ footer {
   overflow: hidden;
 }
 
-.video-container video {
-  width: auto;
-  height: 80%;
-  max-width: 80%;
-  object-fit: contain;
-  object-position: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+/* ----------  WRAPPER: same aspect as 1080×1350 video  ---------- */
+.video-wrapper {
+  position: relative;
+  height: 90vh;               /* use viewport height */
+  max-height: 90vh;
+  aspect-ratio: 1080 / 1350;  
+  margin: auto;               /* centres horizontally */
+  box-shadow: 0 20px 40px rgba(0,0,0,.6);
 }
 
-.overlay {
+/* ----------  VIDEO inside wrapper  ---------- */
+.video-wrapper video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ----------  OVERLAY glued to the wrapper  ---------- */
+.video-wrapper .overlay {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
 }
 
+/* ----------  HOTSPOTS use % of the wrapper (not viewport)  ---------- */
 .hotspot {
   position: absolute;
   display: block;
-  /* Uncomment to debug: 
-   background: rgba(109, 6, 104, 0.3); */
+  /* temp visual aid – delete after test*/
+  background: rgba(120, 36, 205, 0.2); 
 }
