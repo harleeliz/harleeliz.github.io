@@ -173,7 +173,7 @@ footer {
     position: relative;
   width: 100vw;
   height: 100vh;
-  background: #6a6767 url("assets/SiteWallpaper_hr.jpg") no-repeat center center/contain;
+  background: #fefefe url("assets/SiteWallpaper_hr.jpg") no-repeat center center/contain;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,7 +184,7 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(85, 83, 85, 0.3); /* adjust darkness */
+  background: rgba(85, 83, 85, 0.05); /* adjust darkness */
   z-index: 0;
 }
 
@@ -192,8 +192,8 @@ footer {
 /* ----------  WRAPPER: same aspect as 1080×1350 video  ---------- */
 .video-wrapper {
     position: relative;
-  height: 90vh;
-  max-height: 90vh;
+  height: 80vh;
+  max-height: 80vh;
   aspect-ratio: 1080 / 1350;
   margin: auto;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
@@ -219,7 +219,7 @@ footer {
 
 /* ----------  HOTSPOTS use % of the wrapper (not viewport)  ---------- */
 .hotspot {
-    position: absolute;
+  position: absolute;
   display: block;
-  /* background: rgba(120, 36, 205, 0.2); */ /* debug */
+  /*background: rgba(120, 36, 205, 0.2); */ /* debug */
 }
