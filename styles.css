@@ -170,24 +170,34 @@ footer {
 
 /* ----------  VIDEO + WALLPAPER + HOTSPOTS  ---------- */
 .video-container {
-  position: relative;
+    position: relative;
   width: 100vw;
   height: 100vh;
-  background: #6a6767 url("assets/SiteWallpaper_hr.jpg") no-repeat center center/cover;
+  background: #6a6767 url("assets/SiteWallpaper_hr.jpg") no-repeat center center/contain;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+.video-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(85, 83, 85, 0.3); /* adjust darkness */
+  z-index: 0;
+}
+
+
 /* ----------  WRAPPER: same aspect as 1080×1350 video  ---------- */
 .video-wrapper {
-  position: relative;
-  height: 90vh;               /* use viewport height */
+    position: relative;
+  height: 90vh;
   max-height: 90vh;
-  aspect-ratio: 1080 / 1350;  
-  margin: auto;               /* centres horizontally */
-  box-shadow: 0 20px 40px rgba(0,0,0,.6);
+  aspect-ratio: 1080 / 1350;
+  margin: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 /* ----------  VIDEO inside wrapper  ---------- */
@@ -209,8 +219,7 @@ footer {
 
 /* ----------  HOTSPOTS use % of the wrapper (not viewport)  ---------- */
 .hotspot {
-  position: absolute;
+    position: absolute;
   display: block;
-  /* temp visual aid – delete after test*/
-  background: rgba(120, 36, 205, 0.2); 
+  /* background: rgba(120, 36, 205, 0.2); */ /* debug */
 }
