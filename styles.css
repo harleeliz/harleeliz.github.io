@@ -26,11 +26,6 @@
 
 
 
-
-
-
-
-
 :root {
   --pink: #FFCBE1;
   --green: #fccee8;
@@ -237,8 +232,8 @@ footer {
 .hotspot {
   position: absolute;
   display: block;
-  /* Uncomment below to see the hotspots while testing */
-  /* background: rgba(255, 0, 0, 0.3); */
+   /*Uncomment below to see the hotspots while testing 
+   background: rgba(255, 0, 0, 0.3); */
 }
 
 
