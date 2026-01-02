@@ -232,28 +232,28 @@ footer {
 .hotspot {
   position: absolute;
   display: block;
-   /*Uncomment below to see the hotspots while testing 
+  /*Uncomment below to see the hotspots while testing 
    background: rgba(255, 0, 0, 0.3); */
 }
 
 
-/* Gray background + shadowed portrait video */
+/* Site Background */
 .video-container {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  background: #e3f4edb7; /* neutral gray */
+  background: #6a6767 url("assets/SiteWallpaper_hr.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .video-container video {
   width: auto;
-  height: 100%;
-  max-width: 100%;
+  height: 80%;
+  max-width: 80%;
   object-fit: contain;
   object-position: center;
-  box-shadow: 0 20px 40px rgba(12, 12, 12, 0.6); /* soft shadow */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
